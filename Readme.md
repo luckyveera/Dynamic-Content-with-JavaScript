@@ -8,7 +8,8 @@ This e-commerce website project leverages JavaScript to enhance user interaction
 
 How to Run:
 Run index.html page 
-we used external CSS so it is linked in the index.html by the key word <link ref="" href "">
+we used external CSS so it is linked in the index.html by the key <link ref="" href "">
+And JS is included in index.html itself.
 
 
 
