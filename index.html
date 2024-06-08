@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script language="JavaScript"> 
+        var cost; 
+        function fun() { 
+            cost = 0; 
+            if (document.myform.Item1.checked) { cost = cost + 20.15; } 
+            if (document.myform.Item2.checked) { cost = cost + 10.10; } 
+            if (document.myform.Item3.checked) { cost = cost + 26; }
+            if (document.myform.Item4.checked) { cost = cost + 29; }
+            if (document.myform.Item5.checked) { cost = cost + 30; } 
+            if (document.myform.Item6.checked) { cost = cost + 20; }  
+            document.myform.total.value = "$" + cost; 
+        } 
+    </script> 
+</head>
+<body bgcolor="DarkKhaki"> 
+    <form name="myform" enctype="text/plain" method="post"> 
+        <center><h2>Online Shopping Application Using JavaScript</h2></center> 
+        <strong>Personal Details:</strong> 
+        <table> 
+            <tr><td>Name:</td><td> <input type="text" name="customer"/></td></tr> 
+            <tr><td>City:</td><td> <input type="text" name="city"/></td></tr> 
+            <tr><td>Phone:</td><td> <input type="text" name="phone"/></td></tr> 
+            <tr><td>Email:</td><td> <input type="text" name="email"/></td></tr> 
+        </table> 
+        <hr/> 
+        <strong>Description:</strong> 
+        <p>Following are some items with their prices.</p> 
+        <p>Choose the required items by checking the checkboxes.</p> 
+        <hr/> 
+        <div style="float: left; width: 40%;">
+            <strong>Groceries:</strong> 
+            <br/> 
+            <!-- Adding images for grocery items -->
+            <input type="checkbox" name="Item1" value="Item1_chosen" onclick="fun()"> 
+            <img src="Item1.jpeg" alt="Item 1" width="50" height="50"> Carrots ($20.15)<br>
+            
+            <input type="checkbox" name="Item2" value="Item2_chosen" onclick="fun()"> 
+            <img src="Item2.jpeg" alt="Item 2" width="50" height="50"> Tomato ($10.10)<br>
+        </div>
+        <div style="float: left; width: 30%;">
+            <strong>Dairy Products:</strong> 
+            <br/> 
+            <!-- Adding images for dairy products -->
+            <input type="checkbox" name="Item3" value="Item3_chosen" onclick="fun()"> 
+            <img src="Item3.jpeg" alt="Item 3" width="50" height="50"> Milk ($26)<br>
+            
+            <input type="checkbox" name="Item4" value="Item4_chosen" onclick="fun()"> 
+            <img src="Item4.jpeg" alt="Item 4" width="50" height="50"> Cheese ($29)<br>
+        </div>
+        <div style="float: left; width: 30%;">
+            <strong>Fruits:</strong> 
+            <br/> 
+            <!-- Adding images for fruits -->
+            <input type="checkbox" name="Item5" value="Item5_chosen" onclick="fun()"> 
+            <img src="Item5.jpg" alt="Item 5" width="50" height="50"> Apple ($30)<br>
+            
+            <input type="checkbox" name="Item6" value="Item6_chosen" onclick="fun()"> 
+            <img src="Item6.jfif" alt="Item 6" width="50" height="50"> Grapes ($20)<br>
+        </div>
+        <div style="clear: both;"></div> <!-- Clearing the floats -->
+        
+        <input type="text" name="total" value="0"/> 
+        <br/><br/> 
+        <center> 
+            <input type="submit" value="Place the Order" /> 
+            <input type="reset" value="Clear" /> 
+        </center> 
+    </form> 
+</body>
+</html>
